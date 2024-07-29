@@ -16,7 +16,7 @@ def emo_detector():
     '''
     text_to_analyze = request.args.get("textToAnalyze")
     response = emotion_detector(text_to_analyze)
-    
+
     #Check that the entry is not invalid
     if response["dominant_emotion"] is None:
         return "Invalid input ! Try again!."
@@ -36,3 +36,4 @@ def render_index_page():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)
+    
